@@ -15,6 +15,7 @@ const { UserResponse } = DTO;
 
 module.exports = {
     AuthUserRegistration                    : AuthUserRegistration,
+    AuthUserLogin                           : AuthUserLogin,
 };
 
 /**
@@ -55,7 +56,7 @@ function AuthUserRegistration (req, res) {
             return bcrypt.genSalt(SALT_ROUND);
         })
             .then((generatedSalt) => {
-                return bcrypt.hash(req.post('phone_number'), generatedSalt);
+                return bcrypt.hash(req.post('password'), generatedSalt);
             })
                 .then((generatedHashPassword) => {
                     userCreateObj.password = generatedHashPassword;
@@ -70,8 +71,45 @@ function AuthUserRegistration (req, res) {
                         });
                         return res.success("USR201", {
                             user: UserResponse(userCrtRes.dataValues),
-                            token: token,
+                            token,
                         });
                     })
                     .catch(Response.ErrorResponse(res));
+}
+
+
+function AuthUserLogin (req, res) {
+
+    let userObj = {};
+
+    User.findOne({
+        where: {
+            email: req.post('email'),
+            deletedAt: null,
+        },
+        raw: true,
+    })
+        .then((userRes) => {
+            if (!userRes) {
+                throw new AppErr.InvalidCredential("USR403");
+            }
+            userObj = userRes;
+            return bcrypt.compare(req.post('password'), userRes.password);
+        })
+            .then((passMatchRes) => {
+                if (!passMatchRes) {
+                    throw new AppErr.InvalidCredential("USR403");
+                }
+                const tokenPayload = {
+                    id: userObj.id,
+                };
+                const token = jwt.sign(tokenPayload, SECRET, {
+                    expiresIn: "365 days",
+                });
+                return res.success("USR202", {
+                    user: UserResponse(userObj),
+                    token,
+                });
+            })
+            .catch(Response.ErrorResponse(res));
 }

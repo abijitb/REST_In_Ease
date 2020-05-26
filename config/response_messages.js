@@ -23,6 +23,10 @@ module.exports = {
         code: 201,
         message: 'User Registration Successful.'
     },
+    USR202: {
+        code: 200,
+        message: 'Login Successful.'
+    },
     USR400: {
         code: 404,
         message: 'No User Found.',
@@ -34,5 +38,9 @@ module.exports = {
     USR402: {
         code: 422,
         message: 'User Already Exist.',
+    },
+    USR403: {
+        code: 401,
+        message: 'Invalid Credential.',
     },
 };

@@ -9,14 +9,22 @@ process.setMaxListeners(65);
 
 const AppJS                     = require('./app');
 const app                       = AppJS.packages.express;
-const SwaggerExpress            = AppJS.packages.SwaggerExpress;
+const {
+    SwaggerExpress,
+    jwt,
+}                               = AppJS.packages;
 const Middleware                = AppJS.middleware();
 const ResponseMessages          = AppJS.responseMessages();
+const { SECRET }                = AppJS.constant;
 
 module.exports = app;
 
+app.set('AUTH_SECRET', SECRET);
 var config = {
-    appRoot: __dirname
+    appRoot: __dirname,
+    swaggerSecurityHandlers: {
+        api_key: Middleware.APISecurity(app, jwt),
+    },
 };
 
 SwaggerExpress.create(config, function(err, swaggerExpress) {

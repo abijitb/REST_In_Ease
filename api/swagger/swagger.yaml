@@ -11,6 +11,12 @@ schemes:
   # tip: remove http to make production-grade
   - http
   - https
+
+securityDefinitions:
+  api_key:
+    type: apiKey
+    name: Authorization
+    in: header
 # format of bodies a client can send (Content-Type)
 consumes:
   - application/json
@@ -23,17 +29,15 @@ paths:
     x-swagger-router-controller: User
     get:
       description: All User List
+      security:
+        - api_key: []
       operationId: GetAllUsers
-#      parameters:
-#        - name: name
-#          in: query
-#          description: The name of the person to whom to say hello
-#          type: string
-#
-#        - name: last_name
-#          in: query
-#          description: The name of the person to whom to say hello
-#          type: string
+      parameters:
+        - in: header
+          name: Authorization
+          description: "access token from the login"
+          required: true
+          type: string
       tags:
         - USER
       responses:
@@ -78,6 +82,38 @@ paths:
               image:
                 type: string
                 description: Image
+      tags:
+        - AUTH
+      responses:
+        "200":
+          description: Success
+          schema:
+            $ref: "#/definitions/StatusResponse"
+        default:
+          description: Error
+          schema:
+            $ref: "#/definitions/StatusResponse"
+
+
+  /auth/user/login:
+    x-swagger-router-controller: Auth
+    post:
+      description: Auth User Login
+      operationId: AuthUserLogin
+      parameters:
+        - name: AuthUserLogin
+          description: Auth User Login Parameters
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+                description: Email
+              password:
+                type: string
+                description: Password
       tags:
         - AUTH
       responses:
