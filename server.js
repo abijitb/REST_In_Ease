@@ -16,6 +16,7 @@ const {
 const Middleware                = AppJS.middleware();
 const ResponseMessages          = AppJS.responseMessages();
 const { SECRET }                = AppJS.constant;
+const { Response }              = AppJS.helper();
 
 module.exports = app;
 
@@ -64,7 +65,7 @@ SwaggerExpress.create(config, function(err, swaggerExpress) {
 
     const port = process.env.PORT || 10011;
     app.listen(port,() => {
-        console.log(`[ MEMORY USAGE ] => ${ JSON.stringify(process.memoryUsage(), null, 2) }\n[ SERVER ] => http://localhost:${port}`);
+        console.log(`[ CPU USAGE ] => ${ Response.cpuUsageResponse() } \n[ MEMORY USAGE ] => ${ Response.memoryUsageResponse() } \n[ SERVER ] => http://localhost:${port}`);
     })
 
 });

@@ -13,4 +13,5 @@ module.exports = {
     joiPhoneExtension               : require('joi-phone-number-extensions'),
     bcrypt                          : require('bcrypt'),
     jwt                             : require('jsonwebtoken'),
+    os                              : require('os'),
 };
