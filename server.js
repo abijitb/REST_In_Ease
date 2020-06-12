@@ -79,3 +79,4 @@ OASTools.initializeMiddleware( MainDoc, app, ( middleware ) => {
         console.log(`[ SERVER ] => http://localhost:${port}`);
     });
 });
+module.exports = app;

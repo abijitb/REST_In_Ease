@@ -3,7 +3,7 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "start": "pm2 start ./config/process.config.js --env development"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
@@ -20,6 +20,7 @@
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
     "oas-tools": "^2.1.7",
+    "pm2": "^4.4.0",
     "require-all": "^3.0.0",
     "sequelize": "^5.21.12",
     "sequelize-auto-import": "^1.1.1",
