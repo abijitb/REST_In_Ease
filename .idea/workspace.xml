@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="53307676-bed0-406c-9af3-d314d013a320" name="Default Changelist" comment="Authentication Added" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1cA9EPAfdEvseAuaqDAtfx6GnuV" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testapp" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/api/dto" />
+      <recent name="$PROJECT_DIR$/config" />
+    </key>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="53307676-bed0-406c-9af3-d314d013a320" name="Default Changelist" comment="" />
+      <created>1589960418194</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1589960418194</updated>
+      <workItem from="1589960419594" duration="4082000" />
+      <workItem from="1589964548114" duration="6247000" />
+      <workItem from="1590132160844" duration="14948000" />
+      <workItem from="1590150078863" duration="19667000" />
+      <workItem from="1590235370716" duration="9701000" />
+      <workItem from="1590413234827" duration="622000" />
+      <workItem from="1590473533458" duration="19399000" />
+      <workItem from="1590562388556" duration="3365000" />
+      <workItem from="1590646300345" duration="8062000" />
+      <workItem from="1590733548199" duration="4634000" />
+      <workItem from="1590912174895" duration="625000" />
+      <workItem from="1590991287151" duration="2719000" />
+      <workItem from="1591030641741" duration="646000" />
+      <workItem from="1591078752393" duration="5679000" />
+      <workItem from="1591163849788" duration="1198000" />
+      <workItem from="1591250806011" duration="665000" />
+      <workItem from="1591333900673" duration="1266000" />
+    </task>
+    <task id="LOCAL-00001" summary="initial commit:">
+      <created>1590491200027</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1590491200027</updated>
+    </task>
+    <task id="LOCAL-00002" summary="swagger middleware">
+      <created>1590491255346</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1590491255346</updated>
+    </task>
+    <task id="LOCAL-00003" summary="configuration added">
+      <created>1590491280985</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1590491280985</updated>
+    </task>
+    <task id="LOCAL-00004" summary="request and response middleware added">
+      <created>1590491322386</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1590491322386</updated>
+    </task>
+    <task id="LOCAL-00005" summary="migration">
+      <created>1590491344129</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1590491344129</updated>
+    </task>
+    <task id="LOCAL-00006" summary="controller dto validation and validation middleware added">
+      <created>1590491383497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1590491383497</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Authentication Added">
+      <created>1590505024508</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1590505024508</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit:" />
+    <MESSAGE value="swagger middleware" />
+    <MESSAGE value="configuration added" />
+    <MESSAGE value="request and response middleware added" />
+    <MESSAGE value="migration" />
+    <MESSAGE value="controller dto validation and validation middleware added" />
+    <MESSAGE value="Authentication Added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Authentication Added" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="648" y="357" width="677" height="390" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1590490944859">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state x="648" y="357" width="677" height="390" key="#com.intellij.fileTypes.FileTypeChooser/63.27.1857.1053@63.27.1857.1053" timestamp="1590490944859" />
+    <state x="337" y="109" width="1289" height="848" key="CommitChangelistDialog2" timestamp="1590755590039">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state x="337" y="109" width="1289" height="848" key="CommitChangelistDialog2/63.27.1857.1053@63.27.1857.1053" timestamp="1590755590039" />
+    <state x="774" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1591342751223">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state x="774" y="310" width="424" height="484" key="FileChooserDialogImpl/63.27.1857.1053@63.27.1857.1053" timestamp="1591342751223" />
+    <state width="1834" height="278" key="GridCell.Tab.0.bottom" timestamp="1590755258473">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state width="1834" height="278" key="GridCell.Tab.0.bottom/63.27.1857.1053@63.27.1857.1053" timestamp="1590755258473" />
+    <state width="1834" height="278" key="GridCell.Tab.0.center" timestamp="1590755258471">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state width="1834" height="278" key="GridCell.Tab.0.center/63.27.1857.1053@63.27.1857.1053" timestamp="1590755258471" />
+    <state width="1834" height="278" key="GridCell.Tab.0.left" timestamp="1590755258471">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state width="1834" height="278" key="GridCell.Tab.0.left/63.27.1857.1053@63.27.1857.1053" timestamp="1590755258471" />
+    <state width="1834" height="278" key="GridCell.Tab.0.right" timestamp="1590755258473">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state width="1834" height="278" key="GridCell.Tab.0.right/63.27.1857.1053@63.27.1857.1053" timestamp="1590755258473" />
+    <state x="586" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1590679635432">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state x="586" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/63.27.1857.1053@63.27.1857.1053" timestamp="1590679635432" />
+    <state x="654" y="257" width="672" height="678" key="search.everywhere.popup" timestamp="1590248649694">
+      <screen x="63" y="27" width="1857" height="1053" />
+    </state>
+    <state x="654" y="257" width="672" height="678" key="search.everywhere.popup/63.27.1857.1053@63.27.1857.1053" timestamp="1590248649694" />
+  </component>
+</project>
