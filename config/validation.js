@@ -11,15 +11,16 @@ const Validation = requireAll({
 
 /**
  * Validating The Schemas And Values
+ * @param Operation
  * @param values
  * @returns {{valid: boolean, errors: *}|{valid: boolean, errors: null}}
  */
 Validation.validate = function ( Operation, values ) {
-    var result = Validation[Operation].validate(values, { abortEarly: false });
+    var result = Validation[ Operation ].validate( values, { abortEarly: false } );
     if ( result.error !== null ) {
-        return { valid : false, errors : this.errors(result.error)}
+        return { valid : false, errors : this.errors( result.error ) }
     }
-    return { valid : true, errors : null};
+    return { valid : true, errors : null };
 };
 
 /**
@@ -30,9 +31,9 @@ Validation.validate = function ( Operation, values ) {
 Validation.errors = ( joiError ) => {
     var validationErrors = {};
     for ( var i = 0, length_of_i = joiError.details.length; i < length_of_i; i++ ) {
-        var detail = joiError.details[i];
+        var detail = joiError.details[ i ];
         var path = detail.path;
-        validationErrors[path] = detail.message;
+        validationErrors[ path ] = detail.message;
     }
     return validationErrors;
 };
