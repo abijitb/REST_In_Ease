@@ -11,4 +11,6 @@ module.exports = {
     joiDateExtension                : require('joi-date-extensions'),
     joiPhoneExtension               : require('joi-phone-number-extensions'),
     bcrypt                          : require('bcrypt'),
+    Queue                           : require('bull'),
+    Arena                           : require('bull-arena'),
 };

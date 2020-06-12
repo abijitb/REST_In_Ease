@@ -1,6 +1,8 @@
 module.exports = {
     ErrorResponse           : ErrorResponse,
+    redisConf               : redisConf,
 };
+
 /**
  * Error Response Helper
  * @param res
@@ -22,4 +24,25 @@ function ErrorResponse ( res ) {
             return res.error( error.message );
         }
     }
+}
+
+/**
+ * Redis Configuration
+ * @returns {{port: string | number, host: string | string, connectTimeout: number}|{connectTimeout: number, url: string}}
+ */
+function redisConf () {
+    let redis;
+    if ( process.env.REDIS_URL ) {
+        redis = {
+            url: process.env.REDIS_URL,
+            connectTimeout: 40000
+        }
+    } else {
+        redis = {
+            port: process.env.REDIS_PORT || 6379,
+            host: process.env.REDIS_HOST || '127.0.0.1',
+            connectTimeout: 40000
+        }
+    }
+    return redis;
 }

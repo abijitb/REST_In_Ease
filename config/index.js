@@ -7,7 +7,8 @@ module.exports = () => {
         middleware          : () => require('./middleware'),
         validation          : () => require('./validation'),
         error               : () => require('./error'),
-        helper               : () => require('./helper'),
+        helper              : () => require('./helper'),
+        queue               : () => require('./queue'),
         model               : function () { return require('./model')( this ) },
         DBConfig            : function () { return require('./dbConfig')( this ) }
     };

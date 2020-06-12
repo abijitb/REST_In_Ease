@@ -6,6 +6,10 @@ module.exports = {
     BASE_PATH: process.env.BASE_PATH,
     AUTH_SECRET: process.env.AUTH_SECRET,
     SALT_ROUND: 10,
+    PUSH_QUEUE: {
+        TEST_PUSH: 'TEST_PUSH',
+    },
+    MAIL_QUEUE: {},
     DB_TYPE: {
         CHAR            : 'char',
         STRING          : 'string',

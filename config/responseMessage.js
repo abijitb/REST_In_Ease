@@ -27,4 +27,8 @@ module.exports = {
         code: 401,
         message: 'Invalid Credentials.'
     },
+    QUEUE200: {
+        code: 200,
+        message: 'Queue Initiated.'
+    },
 };

@@ -3,7 +3,8 @@ const {
     APP_NAME, APP_VERSION, APP_DESCRIPTION, BASE_URL, BASE_PATH,
 }                           = config.state;
 const {
-    GetUserDetails, UserRegistration, UserLogin
+    GetUserDetails, UserRegistration, UserLogin,
+    TestPushQueue,
 }                           = config.openApi();
 const MainDoc = {
     openapi: '3.0.1',
@@ -24,6 +25,9 @@ const MainDoc = {
         },
         "/auth/user/login": {
             "post": UserLogin,
+        },
+        "/test/queue/push": {
+            "get": TestPushQueue,
         },
     },
     components: {
