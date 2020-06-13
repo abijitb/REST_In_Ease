@@ -18,6 +18,7 @@ function GetUserDetails ( req, res ) {
         where: {
             deletedAt: null,
         },
+        attributes: [ 'id', 'first_name', 'last_name', 'email', 'phone_number', 'image' ],
     })
         .then(( userRes ) => {
             const payload  = userRes.map(( user ) => {
