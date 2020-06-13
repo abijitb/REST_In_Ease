@@ -3,7 +3,8 @@
   "version": "2.0.0",
   "private": true,
   "scripts": {
-    "start": "pm2 start ./config/process.config.js --env development"
+    "start": "pm2 start ./config/process.config.js --env development",
+    "restart": "pm2 start ./config/process.config.js --env development && pm2 update"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",

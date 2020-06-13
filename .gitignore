@@ -5,3 +5,4 @@ package-lock.json
 /.idea
 .idea
 .idea/workspace.xml
+pm2_logs
