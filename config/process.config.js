@@ -6,10 +6,26 @@ const allProcesses = requireAll({
     recursive   : true
 }),
 clusterProcesses = [];
-console.log(__dirname)
+
+for ( p in allProcesses ) {
+    clusterProcesses.push({
+        name            : p,
+        script          : `${ __dirname }/../processes/${ p }.js`,
+        watch           : false,
+        env_development : {
+            NODE_ENV       : "development"
+        },
+        env_production  : {
+            NODE_ENV       : "production"
+        },
+        exec_mode  : "cluster",
+        instances  : 1,
+    });
+}
+
 clusterProcesses.push({
     name            : "API_PROCESS",
-    script          : __dirname+"/../server.js",
+    script          : `${ __dirname }/../server.js`,
     watch           : false,
     env_development : {
         NODE_ENV       : "development"
