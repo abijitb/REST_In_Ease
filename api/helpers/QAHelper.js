@@ -4,6 +4,7 @@ const Queue = config.queue();
 
 module.exports = {
     addPushQueue            : addPushQueue,
+    addMailQueue            : addMailQueue,
 };
 
 /**
@@ -12,6 +13,15 @@ module.exports = {
  * @param queuePayload
  */
 function addPushQueue ( queueName, queuePayload ) {
+    addToQueue( queueName, queuePayload );
+}
+
+/**
+ * Mail Queue Add Method
+ * @param queueName
+ * @param queuePayload
+ */
+function addMailQueue( queueName, queuePayload ) {
     addToQueue( queueName, queuePayload );
 }
 

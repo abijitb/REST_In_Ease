@@ -9,7 +9,9 @@ module.exports = {
     PUSH_QUEUE: {
         TEST_PUSH: 'TEST_PUSH',
     },
-    MAIL_QUEUE: {},
+    MAIL_QUEUE: {
+        TEST_MAIL: 'TEST_MAIL',
+    },
     DB_TYPE: {
         CHAR            : 'char',
         STRING          : 'string',

@@ -4,7 +4,7 @@ const {
 }                           = config.state;
 const {
     GetUserDetails, UserRegistration, UserLogin,
-    TestPushQueue,
+    TestPushQueue, TestMailQueue,
 }                           = config.openApi();
 const MainDoc = {
     openapi: '3.0.1',
@@ -28,6 +28,9 @@ const MainDoc = {
         },
         "/test/queue/push": {
             "get": TestPushQueue,
+        },
+        "/test/queue/mail": {
+            "get": TestMailQueue,
         },
     },
     components: {

@@ -1,6 +1,9 @@
 const config            = require('../../config')();
 const Model             = config.model();
 const {
+    System,
+}                       = config.helper();
+const {
     DB_TABLES,
 }                       = config.state;
 const User              = Model[ DB_TABLES.USER ];
@@ -10,8 +13,19 @@ module.exports = {
 };
 
 function GetUserDetails ( req, res ) {
-    console.log("req.query('username')", req.query('username'));
-    return res.success("USER200", {
-        username: req.query('username'),
-    });
+
+    User.findAll({
+        where: {
+            deletedAt: null,
+        },
+    })
+        .then(( userRes ) => {
+            const payload  = userRes.map(( user ) => {
+                return user.dataValues;
+            });
+            return res.success("USER200", {
+                users: payload,
+            });
+        })
+        .catch( System.ErrorResponse( res ) );
 }

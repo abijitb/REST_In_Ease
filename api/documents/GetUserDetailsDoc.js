@@ -15,14 +15,6 @@ const GetUSerDetails = {
         schema: {
             type: "string"
         }
-    }, {
-        name: "username",
-        in: "query",
-        description: "username to fetch",
-        required: false,
-        schema: {
-            type: "string"
-        }
     }],
     responses: { ...defaultResponseSchema }
 };
