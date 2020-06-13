@@ -25,7 +25,7 @@ app.set('AUTH_SECRET', AUTH_SECRET);
 var oasConfig = {
     controllers: __dirname + '/api/controllers',
     checkControllers: true,
-    loglevel: 'info',
+    loglevel: 'error',
     oasSecurity: true,
     securityFile: {
         api_key: APISecurity( app, JWT ),
